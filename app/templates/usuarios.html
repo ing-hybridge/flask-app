@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Lista de Usuarios</title>
+</head>
+<body>
+    <h1>Usuarios</h1>
+    <ul>
+        {% for usuario in usuarios %}
+        <li>{{ usuario.nombre }} - {{ usuario.email }}</li>
+        {% else %}
+        <li>No hay usuarios registrados.</li>
+        {% endfor %}
+    </ul>
+    <p><a href="{{ url_for('main.home') }}">Volver</a></p>
+</body>
+</html>
